@@ -1,14 +1,9 @@
 [build]
-  base = "communityforum"
-  command = "npm ci && npm run build"
-  publish = "dist"
-
-[build.environment]
-  # Optional: set Node version used by Netlify build image
-  NODE_VERSION = "18"
+base = "communityforum"
+publish = "communityforum/dist"
+command = "npm install && npm run build"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
+from = "/*"
+to = "/index.html"
+status = 200
